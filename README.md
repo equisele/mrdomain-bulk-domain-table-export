@@ -1,2 +1,4 @@
 # mrdomain-bulk-domain-table-export
 Browser Bookmarklet that generates an html table from a massive query of available domains to register in mrdomain.com
+
+[Drag to Browser Bookmarks bar](javascript:if(%22https://www.dondominio.com/buscar/%22==window.location||%22https://www.mrdomain.com/buscar/%22==window.location){var%20available=document.querySelectorAll(%22div.domainsearch-available%22),results=[];0%3CObject.keys(available).length%26%26(Object.entries(available).forEach(([a,b])=%3E{results.push([b.childNodes[0].textContent,b.childNodes[3].textContent])}),function(a){for(var%20b=%22%3Ctable%3E%3Cthead%3E%3Cth%3EDomain%3C/th%3E%3Cth%3EPrice(s)%3C/th%3E%3C/thead%3E%3Ctbody%3E%22,c=0;c%3Ca.length;c++)b+=%22%3Ctr%3E%3Ctd%3E%22+a[c][0]+%22%3C/td%3E%3Ctd%3E%22+a[c][1]+%22%3C/td%3E%3C/tr%3E%22;tabla+=%22%3C/table%3E%22;var%20d=window.open(%22%22);d.document.write(b)}(results))})
